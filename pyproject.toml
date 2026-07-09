@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stubborn-status"
+version = "0.1.0b1"
+description = "Aggregate federated Stubborn doctor reports for terminal, CI, and IDE consumers"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Stubborn contributors" }]
+keywords = ["stubborn", "diagnostics", "doctor", "scip", "devtools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "typer>=0.12,<1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<9.0", "ruff>=0.9,<1"]
+
+[project.scripts]
+stubborn-status = "stubborn_status.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/stubborn-ai/stubborn-status"
+Repository = "https://github.com/stubborn-ai/stubborn-status"
+Documentation = "https://github.com/stubborn-ai/stubborn-hub/blob/main/docs/DEMO-LAUNCHERS.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stubborn_status"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["F", "I"]
