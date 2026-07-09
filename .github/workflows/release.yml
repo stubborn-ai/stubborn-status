@@ -36,7 +36,10 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           ls -la dist/
-          python -m twine upload dist/* --verbose
+          if ! python -m twine upload dist/* --verbose; then
+            echo "::error::PyPI upload failed. For the FIRST release of package name stubborn-status, use an API token with Entire account (all projects) scope — project-scoped tokens from sibling packages cannot create a new PyPI project. See docs/RELEASE.md."
+            exit 1
+          fi
 
   github-release:
     name: GitHub Release
