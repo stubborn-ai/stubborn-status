@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -39,7 +40,7 @@ jobs:
     name: GitHub Release
     runs-on: ubuntu-latest
     needs: pypi
-    if: ${{ always() && needs.pypi.result != 'cancelled' }}
+    if: ${{ needs.pypi.result == 'success' }}
     steps:
       - uses: actions/checkout@v4
 

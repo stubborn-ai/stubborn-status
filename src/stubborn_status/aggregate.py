@@ -7,7 +7,6 @@ import shlex
 import shutil
 import subprocess
 from pathlib import Path
-from typing import Any
 
 from stubborn_status import __version__
 from stubborn_status.models import (
