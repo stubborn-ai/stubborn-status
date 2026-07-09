@@ -34,7 +34,9 @@ jobs:
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: python -m twine upload dist/* --skip-existing
+        run: |
+          ls -la dist/
+          python -m twine upload dist/* --verbose
 
   github-release:
     name: GitHub Release
