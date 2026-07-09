@@ -2,16 +2,14 @@
 
 **Beta `0.1.0b1`** — aggregate federated `doctor --json` reports from Stubborn ecosystem packages.
 
+[![PyPI](https://img.shields.io/pypi/v/stubborn-status)](https://pypi.org/project/stubborn-status/)
+
 Part of [stubborn-ai](https://github.com/stubborn-ai). Spec: [ADR-016](https://github.com/stubborn-ai/stubborn/blob/main/docs/adr/ADR-016-doctor-status-aggregation.md).
 
 ## Install
 
-PyPI publish is pending. Install from the repo until the first release:
-
 ```bash
-git clone https://github.com/stubborn-ai/stubborn-status.git
-cd stubborn-status
-pip install -e .
+pip install stubborn-status
 ```
 
 Requires sibling CLIs on `PATH` (`stubborn`, `stubborn-mcp`, `stubborn-watch`, …).
@@ -46,4 +44,4 @@ pip install -e '.[dev]'
 pytest
 ```
 
-See [CHANGELOG](CHANGELOG.md).
+See [CHANGELOG](CHANGELOG.md) and [docs/RELEASE.md](docs/RELEASE.md).
