@@ -17,7 +17,7 @@ SAMPLE_REPORT = {
     "schema": DOCTOR_REPORT_SCHEMA,
     "package": "stubborn-stub",
     "command": "stubborn doctor",
-    "version": "0.9.0b5",
+    "version": "0.9.0b6",
     "cwd": "/tmp",
     "exit": 0,
     "checks": [{"id": "core.import", "status": "pass", "message": "ok", "hint": None}],
