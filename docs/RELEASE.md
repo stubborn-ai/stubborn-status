@@ -7,11 +7,11 @@
    **Entire account (all projects)** scope on PyPI — project-scoped tokens copied
    from `stubborn-stub` / `stubborn-mcp` / `stubborn-watch` cannot create a new
    project.
-3. Push or move tag `v0.1.0b1` (or run **Actions → Release → Run workflow**).
+3. Push tag `v0.10.0b1` (or run **Actions → Release → Run workflow**).
 
 ```bash
-git tag -fa v0.1.0b1 -m "Release stubborn-status 0.1.0b1."
-git push origin v0.1.0b1 --force
+git tag -a v0.10.0b1 -m "Release stubborn-status 0.10.0b1."
+git push origin v0.10.0b1
 ```
 
 ## Manual fallback

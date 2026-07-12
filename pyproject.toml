@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "stubborn-status"
-version = "0.1.0b1"
+version = "0.10.0b1"
 description = "Aggregate federated Stubborn doctor reports for terminal, CI, and IDE consumers"
 readme = "README.md"
 requires-python = ">=3.11"
