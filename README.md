@@ -1,6 +1,6 @@
 # stubborn-status
 
-**Beta `0.10.0b1`** — aggregate federated `doctor --json` reports from Stubborn ecosystem packages.
+**Beta `0.10.0b2`** — aggregate federated `doctor --json` reports from Stubborn ecosystem packages.
 
 [![PyPI](https://img.shields.io/pypi/v/stubborn-status)](https://pypi.org/project/stubborn-status/)
 
